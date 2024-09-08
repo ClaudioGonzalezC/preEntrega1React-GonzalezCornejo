@@ -1,4 +1,7 @@
 import "./navbar.css";
+import logo from "../../assets/images/logo-booking.webp";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 export const Navbar = () => {
     let nombre = 'Claudio';
@@ -8,6 +11,7 @@ export const Navbar = () => {
 
     return (
         <nav>
+            <img src={logo} alt=""/>
             <h1 className="title">Hola, {nombre}</h1>
             <ul>
                 <li>
@@ -20,7 +24,8 @@ export const Navbar = () => {
                     <a href="#">Contact</a>
                 </li>
             </ul>
-            <button onClick={saludar}>Saludar</button>
+            <Button variant="contained">Saludar</Button>
+            <TextField label="Nombre" variant="outlined" />
         </nav>
     )
 };
